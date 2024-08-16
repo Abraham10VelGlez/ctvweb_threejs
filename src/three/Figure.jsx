@@ -8,15 +8,15 @@ export default function Figure() {
 
     return (
 
-        <Canvas className='CanvasX' camera={{ position: [0, 0, 60], fov: 25 }} >
+        <Canvas className='CanvasX' camera={{ position: [0, 0, 460], fov: 25 }} >
             <OrbitControls />
             <Environment preset='city' metalness={0} roughness={0} />
             <GizmoHelper alignment="botton-right" margin={[100, 100]} >
                 <GizmoViewport axisColors={['red', 'green', 'blue']} labelColors="black" ></GizmoViewport>
             </GizmoHelper>
             {/*<Earth position={[0, 0, 0]}></Earth>*/}
-            
-            <Earth2 position={[0, 0, 0]}></Earth2>
+
+            <Earth2 ></Earth2>
         </Canvas>
 
 

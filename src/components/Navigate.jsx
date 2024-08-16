@@ -1,6 +1,7 @@
 import { Routes, Route, useNavigate, Link } from 'react-router-dom';
 import Fondo from '../background/Fondo';
 import Figure from '../three/Figure';
+import Figure2 from '../three/Figure2';
 
 export default function Navigate() {
 
@@ -10,6 +11,7 @@ export default function Navigate() {
         //        <ShoppingCartProvider>
         <Routes>
             <Route path="/" index element={<Home />} />
+            <Route path="/porta" index element={<Figure2></Figure2>} />
             <Route path="/back" element={<Fondo></Fondo>} />
             <Route path="/figure" element={<Figure></Figure>} />
             {/* comodin para dar por defecto la pagina que no sirve */}
@@ -27,7 +29,7 @@ function Boxes() {
 
 function Navbar() {
     // visible on every page
-    return <> <h1>NAVEGACION DE RUTAS QUEDETALLE </h1></>
+    return <> <h1>NAVEGACION DE RUTAS  </h1></>
 }
 
 function Home() {
