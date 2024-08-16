@@ -3,6 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Environment, OrbitControls, Stars, GizmoHelper, GizmoViewport, Line, Trail, Float, Sphere } from '@react-three/drei';
 import Earth from './Earth'
 import '../assets/css/fondo.css'
+import Earth2 from './Earth2';
 export default function Figure() {
 
     return (
@@ -13,7 +14,9 @@ export default function Figure() {
             <GizmoHelper alignment="botton-right" margin={[100, 100]} >
                 <GizmoViewport axisColors={['red', 'green', 'blue']} labelColors="black" ></GizmoViewport>
             </GizmoHelper>
-            <Earth position={[0, 0, 0]}></Earth>
+            {/*<Earth position={[0, 0, 0]}></Earth>*/}
+            
+            <Earth2 position={[0, 0, 0]}></Earth2>
         </Canvas>
 
 
