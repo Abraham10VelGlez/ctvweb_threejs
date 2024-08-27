@@ -2,6 +2,8 @@ import { Routes, Route, useNavigate, Link } from 'react-router-dom';
 import Fondo from '../background/Fondo';
 import Figure from '../three/Figure';
 import Figure2 from '../three/Figure2';
+import Figure3 from '../three/Figure3';
+import Prueba from '../three/Prueba';
 
 export default function Navigate() {
 
@@ -14,6 +16,8 @@ export default function Navigate() {
             <Route path="/porta" index element={<Figure2></Figure2>} />
             <Route path="/back" element={<Fondo></Fondo>} />
             <Route path="/figure" element={<Figure></Figure>} />
+            <Route path="/ini" element={<Figure3/>} />
+            <Route path="/pp" element={<Prueba></Prueba> } />
             {/* comodin para dar por defecto la pagina que no sirve */}
             <Route path="*" element={<NotFound />} />
         </Routes>

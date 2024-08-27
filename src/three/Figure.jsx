@@ -14,7 +14,7 @@ export default function Figure() {
             <GizmoHelper alignment="botton-right" margin={[100, 100]} >
                 <GizmoViewport axisColors={['red', 'green', 'blue']} labelColors="black" ></GizmoViewport>
             </GizmoHelper>
-            {/*<Earth position={[0, 0, 0]}></Earth>*/}
+            
 
             <Earth2 ></Earth2>
         </Canvas>
