@@ -1,5 +1,5 @@
 .world {
-  background: black;
+  /*background: black;*/
 }
 
 .classdata_studioa {
@@ -19,12 +19,13 @@
 }
 
 .CanvasX {
+  background: linear-gradient(to bottom, #8a2036, #efe1ca ); /* De azul (#3498db) a verde (#2ecc71) */
   position: fixed !important;
   inset: 0 !important;
 
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  
 }
 
 

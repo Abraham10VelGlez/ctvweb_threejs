@@ -17,12 +17,12 @@ body {
 }
 
 a {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 a {
   pointer-events: all;
-  color: rgb(67, 185, 20);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 

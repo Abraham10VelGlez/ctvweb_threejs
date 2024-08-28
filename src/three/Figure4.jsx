@@ -11,6 +11,7 @@ import { easing, geometry } from 'maath'
 import { suspend } from 'suspend-react'
 import Modelon from './Modelon';
 import Login from '../components/Login';
+import Earthf from './Earthf';
 
 
 
@@ -31,7 +32,7 @@ export default function Figure4() {
 
 
 
-    function Frame({ id, name, author, bg, nameFontSize, width = 1, height = 1.91803398875, children, ...props }) {
+    function Frame({ id, name, author, bg, nameFontSize, width = 1.5, height = 1.91803398875, children, ...props }) {
         const portal = useRef()
         const [, setLocation] = useLocation()
         const [, params] = useRoute('/item/:id')
@@ -80,37 +81,48 @@ export default function Figure4() {
     return (
 
         <>
-            <Canvas className='CanvasX' flat camera={{ fov: 75, position: [0, 0, 10] }}>
+
+            <Canvas className='CanvasX' flat camera={{ fov: 65, position: [0, 0, 10] }}>
                 <OrbitControls />
 
-                {/*<GizmoHelper alignment="bottom-right" margin={[100, 100]}>
+                {/*
+                 background: linear-gradient(to bottom, #3498db, #2ecc71);
+
+                <GizmoHelper alignment="bottom-right" margin={[100, 100]}>
                     <GizmoViewport axisColors={['red', 'green', 'blue']} labelColors="black" />
-                </GizmoHelper>*/}
+                </GizmoHelper>
 
-                <color attach="background" args={['#8a2036']} />
+                
+                
+                */}
 
 
-                <Frame id="02" name="&nbsp;CTV WEB 2025" author="doble click para entrar" bg="#efe1ca" nameFontSize="76px">
-                    <Text
+
+
+                <Frame id="02" name="&nbsp;CTV WEB 2025" author="doble click para entrar" nameFontSize="76px">
+                    {/*<Text
                         position={[0, 3, -10]} // Ajusta la posición del texto dentro del frame
                         fontSize={0.3} // Ajusta el tamaño de la letra aquí
                         color="#000" // Ajusta el color del texto
                     >
                         Inicio de Sesión
-                        <Html position={[-1, -1, 0]} distanceFactor={15}>
+                        <Html position={[-1.2, -1, 0]} distanceFactor={15}>
                             <div style={{ color: 'black', backgroundColor: '#efe1ca', padding: '50px', borderRadius: '5px' }}>
                                 <h1>CAPTURA DE TABLAS DE VALOR</h1>
                                 <Login></Login>
                             </div>
                         </Html>
                     </Text>
-                    {/* Inserta un componente de React en la escena 3D */}
+                     Inserta un componente de React en la escena 3D */}
 
 
                     <ambientLight intensity={0.5} /> {/* Luz ambiental */}
                     <directionalLight position={[5, 5, 5]} intensity={1} />
+                    <color attach="background" args={['#000']} />
+                    <Stars saturation={0} count={800} speed={3} />
                     <Environment preset='city' metalness={0} roughness={0} />
-                    <Modelon position={[0, -65, -175]} scale="1.5"></Modelon>
+                    {/*<Modelon position={[0, -65, -175]} scale="1.5"></Modelon>*/}
+                    <Earthf position={[0, -65, -175]} scale="1.5"></Earthf>
                 </Frame>
 
                 <Rig />
@@ -127,6 +139,9 @@ export default function Figure4() {
                     {params ? '< Regresar' : ''}
                 </a>
             </div>{' '}
+
+
+
         </>
 
 
