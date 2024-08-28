@@ -4,6 +4,7 @@ import { Environment, OrbitControls, Stars, GizmoHelper, GizmoViewport, Line, Tr
 import Earth from './Earth'
 import '../assets/css/fondo.css'
 import Earth2 from './Earth2';
+import Modelon from './Modelon';
 export default function Figure() {
 
     return (
@@ -16,7 +17,8 @@ export default function Figure() {
             </GizmoHelper>
             
 
-            <Earth2 ></Earth2>
+            {/*<Earth2 ></Earth2>*/}
+            <Modelon></Modelon>
         </Canvas>
 
 

@@ -1,6 +1,6 @@
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef, useEffect } from 'react'
+import { useGLTF, useAnimations } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 export default function Earth2(props) {
     /*const { nodes, materials } = useGLTF('/earth2/scene.gltf')
@@ -12,7 +12,24 @@ export default function Earth2(props) {
     //<mesh geometry={nodes.Object_6.geometry} material={materials['agua']} scale={80} />
     //useFrame((state, delta) => (meshRef.current.rotation.y += delta / 10))
 
-    const { nodes, materials, scene } = useGLTF('/earth2/scene.gltf')
+    const group = useRef()
+    const { nodes, materials, scene, animations } = useGLTF('/earth2/scene.gltf')
+    const { actions, names } = useAnimations(animations, group)
+    console.log(names);
+
+    //activacion de animacion del modelo 3D
+    useEffect(() => {
+        console.log(names[0])
+        //actions[names[0]].reset().play();       
+        //if (names.length > 0) {
+        actions[names[0]];
+        actions['Animaci��n'];
+
+        //actions[names[2]].reset().fadeIn(0.5).play();
+    }, [actions, names]);
+
+
+
     const meshRef = useRef()
     useFrame((state, delta) => (meshRef.current.rotation.x += delta / 10))
 
