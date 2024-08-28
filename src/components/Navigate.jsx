@@ -4,6 +4,8 @@ import Figure from '../three/Figure';
 import Figure2 from '../three/Figure2';
 import Figure3 from '../three/Figure3';
 import Prueba from '../three/Prueba';
+import Figure4 from '../three/Figure4';
+import Modelon from '../three/Modelon';
 
 export default function Navigate() {
 
@@ -12,7 +14,8 @@ export default function Navigate() {
 
         //        <ShoppingCartProvider>
         <Routes>
-            <Route path="/" index element={<Home />} />
+            <Route path="/" index element={<Home />} />            
+            <Route path="/ctv" element={<Figure4></Figure4>} />
             <Route path="/porta" index element={<Figure2></Figure2>} />
             <Route path="/back" element={<Fondo></Fondo>} />
             <Route path="/figure" element={<Figure></Figure>} />

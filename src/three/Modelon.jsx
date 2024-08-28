@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-
+import { useFrame } from '@react-three/fiber'
 
 export default function Modelon(props) {
     const group = useRef()
@@ -9,7 +9,7 @@ export default function Modelon(props) {
     console.log(names);
     //activacion de animacion del modelo 3D
     useEffect(() => {
-        if(actions && names && names.length > 0) {
+        if (actions && names && names.length > 0) {
             console.log('Animación a reproducir:', names[0]);
 
             // Validar que la acción correspondiente esté definida antes de intentar reproducirla
@@ -24,9 +24,20 @@ export default function Modelon(props) {
         }
 
     }, [actions, names]);
+
+    const meshRef = useRef()
+    useFrame((state, delta) => (meshRef.current.rotation.x += delta / 10))
+
+    // Rotación continua del planeta sirve este ejemplo
+    /*useFrame((state, delta) => {
+        if (meshRef.current) {
+            meshRef.current.rotation.y += delta / 10; // Ajusta la velocidad de rotación aquí
+        }
+    });*/
+
     return (
         <group ref={group} {...props} dispose={null}>
-            <group rotation={[0, 0.01, 0,]} >
+            <group ref={meshRef} rotation={[0, 0.01, 0,]} >
                 <primitive object={nodes.root} scale="50" />
             </group>
 

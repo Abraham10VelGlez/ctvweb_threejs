@@ -3,6 +3,7 @@ import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { MeshStandardMaterial } from 'three';
+import Modelon from './Modelon';
 
 const Model = ({ url }) => {
     const gltf = useLoader(GLTFLoader, url);
@@ -21,7 +22,8 @@ const Prueba = () => (
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={50} />
         <OrbitControls />
-        <Model url="free_1975_porsche_911_930_turbo.glb" />
+        {/*<Model url="free_1975_porsche_911_930_turbo.glb" />*/}
+        <Modelon></Modelon>
     </Canvas>
 );
 
