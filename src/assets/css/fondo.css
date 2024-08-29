@@ -1,5 +1,15 @@
+
+
+
 .world {
-  /*background: black;*/
+  
+    background: linear-gradient(to bottom, #fd806a, #1507db9c ); /* De azul (#3498db) a verde (#2ecc71) */
+    position: fixed !important;
+    inset: 0 !important;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    
 }
 
 .classdata_studioa {

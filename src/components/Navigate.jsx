@@ -7,6 +7,8 @@ import Prueba from '../three/Prueba';
 import Figure4 from '../three/Figure4';
 import Modelon from '../three/Modelon';
 import Login from './Login';
+import Inicio from '../welcome/Inicio';
+import Figure5 from '../three/Figure5';
 
 export default function Navigate() {
 
@@ -16,6 +18,8 @@ export default function Navigate() {
         //        <ShoppingCartProvider>
         <Routes>
             <Route path="/" index element={<Home />} />
+           
+            <Route path="/scd" element={<Inicio></Inicio>} />
             <Route path="/login" index element={<Login />} />
             <Route path="/ctv" element={<Figure4></Figure4>} />
             <Route path="/porta" index element={<Figure2></Figure2>} />
